@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>coffezy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/><!-- linking CSS file-->
+    <link rel="stylesheet" href="css/VehicleLogs.css"><!-- linking CSS file-->
+
+    <script src="js/jquery-1.11.1.min.js"></script> <!-- linking JS file-->
+    <script src="js/jquery.mobile-1.4.5.min.js"></script><!-- linking JS file-->
+    <script src="js/VehicleLogs.js"></script><!-- linking JS file-->
+
+
+</head>
+<body>
+<div data-role="page" id="home_page">
+    <div data-role="header">
+        <a id="6" class="linkcirlce" href="#Get-form" data-role="button" onclick= "getLogs()">ORDER</a>
+        <h1><a href="#home_page"><img class="logo" src="img/logo.png" alt="logo" /></a></h1>
+        <a id="6" class="linkcirlce" href="#Show-form" data-role="button" onclick="showLogs()">CARTS</a>
+    </div>
+
+    <div data-role="content"> <!--creating a division for the main content for the main page -->
+
+
+        <a href="#vehicle" data-role="button" id="Car" onclick="getID(1)"><div class="shopimg"><img class="img-circle" data-inline="true" src="img/ls.jpg" alt="logo" /></div><div class="shoptext" data-inline="true"><h3>Coffee Alchemy</h3><p>24 Addison Rd, Marrickville</p><p>Phone: (02) 9516 1997</p></div></a>
+        <a href="#vehicle" data-role="button" id="Truck" onclick="getID(2)"> <div class="shopimg"><img class="img-circle" data-inline="true" src="img/unnamed.jpg" alt="logo" /></div><div class="shoptext" data-inline="true"><h3>Zarraffa's Coffee</h3><p>42 Marine Parade, Southport QLD</p><p>Phone: (07) 5591 6577</p></div></a>
+        <a href="#vehicle" data-role="button" id="10T Truck" onclick="getID(3)"><div class="shopimg"><img class="img-circle" data-inline="true" src="img/23.jpg" alt="logo" /></div><div class="shoptext" data-inline="true"><h3>Campos Coffee</h3><p>193 Missenden Rd, Newtown NSW</p><p>Phone: (02) 9516 3361</p></div></a>
+        <a href="#vehicle" data-role="button" id="Tipper" onclick="getID(4)"><div class="shopimg"><img class="img-circle" data-inline="true" src="img/download.jpg" alt="logo" /></div><div class="shoptext" data-inline="true"><h3>Cappuccine Australia</h3><p>McCauley St, Matraville NSW</p><p>Phone: 1300 788 355</p></div></a>
+        <a href="#vehicle" data-role="button" id="Articulated" onclick="getID(5)"><div class="shopimg"><img class="img-circle" data-inline="true" src="img/re.jpg" alt="logo" /></div><div class="shoptext" data-inline="true"><h3>Degraves Espresso</h3><p> Degraves St, Melbourne VIC</p><p>Phone: (03) 9654 1245</p></div></a>
+
+
+        <br><!-- giving a line break to seperate the footer from the main page contents-->
+    </div><!-- cloding the content -->
+
+    <div data-role="footer" data-position="fixed" style="text-align: center"><!--creating a division for the footer in the main page -->
+        <p> <B>Sujal & Mandeep.2017</B></p> <!-- contents of the main page footer-->
+    </div><!-- /footer -->
+
+</div><!-- /home_page -->
+
+
+
+<div data-role="page" id="vehicle"> <!-- if the user selects the type of vehicle they want to know about, the request is sent to this division-->
+    <div data-role="header">
+        <a id="6" class="linkcirlce" href="#Get-form" data-role="button" onclick= "getLogs()">ORDER</a>
+        <h1><a href="#home_page"><img class="logo" src="img/logo.png" alt="logo" /></a></h1>
+        <a id="6" class="linkcirlce" href="#Show-form" data-role="button" onclick="showLogs()">CARTS</a>
+    </div>
+
+
+
+    <div data-role="content">
+        <div data-role="header">
+            <h1> <span id="CarName"> </span></h1> <!-- This span id displays what vehicle has been selected by the user -->
+        </div><!-- /header -->
+
+
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_1" onclick="getIDoo(1)"><img class="icon" src="img/101857-OME2Y7-108-01.png" alt="logo" /><br><p>EXPRESSO</p></a>
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_2" onclick="getIDoo(2)"><img class="icon" src="img/101857-OME2Y7-108-02.png" alt="logo" /><p>AMERICANO</p></a>
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_3" onclick="getIDoo(3)"><img class="icon" src="img/101857-OME2Y7-108-03.png" alt="logo" /><p>MACCHIATO</p></a>
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_4" onclick="getIDoo(4)"><img class="icon" src="img/101857-OME2Y7-108-04.png" alt="logo" /><p>CAPPUCCINO</p></a>
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_5" onclick="getIDoo(5)"><img class="icon" src="img/101857-OME2Y7-108-05.png" alt="logo" /><p>LATTE</p></a>
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_6" onclick="getIDoo(6)"><img class="icon" src="img/101857-OME2Y7-108-06.png" alt="logo" /><p>MOCHA</p></a>
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_7" onclick="getIDoo(7)"><img class="icon" src="img/101857-OME2Y7-108-07.png" alt="logo" /><p>DOPPIO</p></a>
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_8" onclick="getIDoo(8)"><img class="icon" src="img/101857-OME2Y7-108-08.png" alt="logo" /><p>GLACE</p></a>
+        <a href="#coffee_choice" data-inline="true" class="iconoo" data-role="button" id="Coffee_9" onclick="getIDoo(9)"><img class="icon" src="img/101857-OME2Y7-108-09.png" alt="logo" /><p>IRISH</p></a>
+
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed" style="text-align: center"> <!-- footer for the Type of Vehicle division -->
+        <a href="#vehicle" id="nxt" onclick="next()" data-role="button" data-icon="arrow-r" data-inline="true">Next</a>
+        <a href="#vehicle" id="" onclick="prev()" data-role="button" data-icon="arrow-l" data-inline="true">Previous</a>
+        <a href="#home_page" data-role="button" data-icon="home" data-inline="true" >Home</a>
+    </div><!-- /footer -->
+</div> <!--/vehicle -->
+
+<!-- Show log page -->
+<div data-role="page" id="coffee_choice">
+
+    <div data-role="header">
+        <a id="6" class="linkcirlce" href="#Get-form" data-role="button" onclick= "getLogs()">ORDER</a>
+        <h1><a href="#home_page"><img class="logo" src="img/logo.png" alt="logo" /></a></h1>
+        <a id="6" class="linkcirlce" href="#Show-form" data-role="button" onclick="showLogs()">CARTS</a>
+    </div>
+
+
+    <div data-role="content">
+
+        <div data-role="header">
+             <h1> <span id="CarName"> </span></h1> <!-- This span id displays what vehicle has been selected by the user -->
+        </div><!-- /header -->
+
+        <div data-role="header">
+                    <h1><span id="CoffeeName"> </span></h1>
+        </div><!-- /header-->
+
+        <form id="vehicle-form" method="post" data-ajax="false">
+
+
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="horizontal"  >
+                    <legend>Choose sugar</legend>
+                    <input type="radio" name="Sugar" id="radio-choice-21" value="0" checked="checked"  />
+                    <label for="radio-choice-21"><img class="logo" src="img/101857-OME2Y7-108-13.png" alt="logo" /><br>0
+                    </label>
+
+                    <input type="radio" name="Sugar" id="radio-choice-22" value="1"  />
+                    <label for="radio-choice-22"><img class="logo" src="img/101857-OME2Y7-108-14.png" alt="logo" /><br>1</label>
+
+                    <input type="radio" name="Sugar" id="radio-choice-23" value="2"  />
+                    <label for="radio-choice-23"><img class="logo" src="img/101857-OME2Y7-108-15.png" alt="logo" /><br>2</label>
+
+                </fieldset>
+
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Choose strength</legend>
+                    <input type="radio" name="strength" id="radio-choice-26" value="Weak" checked="checked" />
+                    <label for="radio-choice-26"><img class="logo" src="img/101857-OME2Y7-108-16.png" alt="logo" /><br>Weak</label>
+
+                    <input type="radio" name="strength" id="radio-choice-27" value="Medium"  />
+                    <label for="radio-choice-27"><img class="logo" src="img/101857-OME2Y7-108-17.png" alt="logo" /><br>Medium</label>
+
+                    <input type="radio" name="strength" id="radio-choice-28" value="Strong"  />
+                    <label for="radio-choice-28"><img class="logo" src="img/101857-OME2Y7-108-18.png" alt="logo" /><br>Strong</label>
+
+                </fieldset>
+
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Choose quantity</legend>
+                    <input type="radio" name="quantity" id="radio-choice-36" value="Small" checked="checked" />
+                    <label for="radio-choice-36"><img class="logo" src="img/101857-OME2Y7-108-10.png" alt="logo" /><br>Small</label>
+
+                    <input type="radio" name="quantity" id="radio-choice-37" value="Medium"  />
+                    <label for="radio-choice-37"><img class="logo" src="img/101857-OME2Y7-108-11.png" alt="logo" /><br>Medium</label>
+
+                    <input type="radio" name="quantity" id="radio-choice-38" value="Large"  />
+                    <label for="radio-choice-38"><img class="logo" src="img/101857-OME2Y7-108-12.png" alt="logo" /><br>Large</label>
+
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal" id="havetake">
+                    <legend>Have here or take away?</legend>
+                    <input type="radio" name="havetake" id="radio-choice-39" value="Have Here" checked="checked" />
+                    <label for="radio-choice-39"><img class="logo" src="img/101857-OME2Y7-108-10.png" alt="logo" /><br>Have here</label>
+
+                    <input type="radio" name="havetake" id="radio-choice-40" value="Take Away"  />
+                    <label for="radio-choice-40"><img class="logo" src="img/101857-OME2Y7-108-19.png" alt="logo" /><br>Take Away</label>
+
+
+                </fieldset>
+
+
+                <button  data-rel="dialog" type="submit" data-role="submit" id="submit" value="Save Log Entry" class="ui-btn-b"  >Add to cart</button>
+                <a href="#vehicle" data-role="button" class="ui-btn-b" id="addmore" >Add more</a>
+                <a id="6" href="#Show-form" data-role="button" onclick="showLogs()">Show Cart</a>
+
+
+
+            </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed" style="text-align: center">
+        <a href="#home_page" data-role="button" data-icon="delete" data-inline="true">Home</a>
+    </div><!--/footer -->
+    </form>
+</div><!--/vehicle-form -->
+
+<!-- Show log page -->
+<div data-role="page" id="Show-form">
+    <form id="logs-form">
+        <div data-role="header">
+            <a id="6" class="linkcirlce" href="#Get-form" data-role="button" onclick= "getLogs()">ORDER</a> <!--Going back to the Type of Vehicle page from the Show Logs page -->
+            <h1><a href="#home_page"><img class="logo" src="img/logo.png" alt="logo" /></a></h1>
+            <a id="6" class="linkcirlce"onclick="myFunction()" data-role="button">BUY</a> <!-- send button helps to delete all the data in the Slow Logs page-->
+        </div><!-- /header-->
+        <div data-role="main" class="ui-content">
+            <div class="ui-field-contain">
+                <label><b><h2>You ordered the following:</h2></b></label>
+            </div>
+
+            <div class="logs-to-append"> <!--all the contents that have been stored in the local storage is stored in this division -->
+
+
+            </div> <!--/logs-to-append-->
+
+            <a id="6" onclick="myFunction()" class="carter" data-role="button">BUY</a>
+        </div><!--/ui-field-contain -->
+
+
+        <div data-role="footer" data-position="fixed" style="text-align: center">
+            <a href="#home_page" data-role="button" data-icon="delete" data-inline="true">Home</a>
+        </div><!--/footer -->
+    </form>
+</div><!--/Show-form -->
+
+<div data-role="page" id="Get-form">
+    <div data-role="header">
+        <a id="6" class="linkcirlce" href="#Get-form" data-role="button" onclick= "getLogs()">ORDER</a>
+        <h1><a href="#home_page"><img class="logo" src="img/logo.png" alt="logo" /></a></h1>
+        <a id="6" class="linkcirlce" href="#Show-form" data-role="button" onclick="showLogs()">CARTS</a>
+    </div>
+    <form id="g_log-form">
+
+        <div data-role="main" class="ui-content">
+            <div class="ui-field-contain">
+                <label><b>Ordered coffee from shops</b></label>
+            </div>
+            <div>
+                <label>Shop and coffee items</label>
+            </div>
+
+            <p id="demo"></p>
+            <div class="logs-to-append">
+            </div>
+
+
+        </div>
+
+
+        <div data-role="footer" style="padding-left: 5px;" data-position="fixed">
+            <a href="#vehicle" data-role="button" data-icon="back" data-inline="true">Back</a>
+        </div><!--/footer -->
+    </form>
+</div>
+
+
+</body>
+</html>
