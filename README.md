@@ -14,10 +14,17 @@ From the facts we know that people usually wait for 5 minutes for their coffee. 
 3.	Summary of task:
 Some of the task that Coffezy application must be able to do are given are:
 •	The user must be able to select shop and then the coffee type from the selected shop.
-•	The user must be able to change the coffee details by clicking on the icons rather than typing the whole content.  
+
+•	The user must be able to change the coffee details by clicking on the icons rather than typing the whole content. 
+
 •	Coffezy application must be able to navigate the user to different coffee shop that are shown in the application and must provide the details of the shop including location, name and phone number.
+
 •	The user be able to order more than 2 coffees at once with add more function.
+
 •	The user must be able to add and delete items from the cart.
+
 •	Coffezy must be able to send the users order to the mongo lab database and a backup of user’s order should also be maintained in local storage of the server. 
+
 •	Coffezy must also be able to retrieve the user’s order from the mongo lab and show the order to the user when desired.
+
 •	The user must be able to execute dynamic page according to selected shop options
